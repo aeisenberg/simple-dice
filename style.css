@@ -1,0 +1,14 @@
+/* Styles go here */
+
+.number {
+  text-align: center;
+  height: 50px;
+}
+
+.body {
+	padding: 25px;
+}
+
+.head {
+	padding: 25px;
+}

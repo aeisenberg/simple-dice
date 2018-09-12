@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row head">
+    <div class="col-md-3">
+      <label for="numbers"> Enter the kinds of dice you want:</label>
+    </div>
+    <div class="col-md-2">
+      <input #numbersEl class="form-control"
+          required autofocus="true"
+          id="numbers"
+          type="text"
+          value="{{numbers.join(' ')}}"
+          placeholder="Enter dice numbers">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-success" (click)="setNumbers(numbersEl.value)">Go!</button>
+    </div>
+  </div>
+  <div class="row">
+    <dice *ngFor="let number of numbers" class="col-md-2" [sides]="number">
+    </dice>
+    <div class="col-md-2"><button type="button" class="btn btn-default btn-lg btn-block" (click)="setNumbers('')">Clear all</button></div>
+  </div>
+</div>
